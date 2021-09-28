@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
+        let moviesListViewModel = MoviesListViewModel(moviesRepository: MoviesRepository())
+        window.rootViewController = UINavigationController(rootViewController:  MoviesListViewController(moviesListViewModel: moviesListViewModel))
         self.window = window
         self.window?.makeKeyAndVisible()
     }
