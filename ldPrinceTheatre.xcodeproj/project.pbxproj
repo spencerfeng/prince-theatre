@@ -16,13 +16,31 @@
 		9C09E66C2709A9BF0008BCC6 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09E66B2709A9BF0008BCC6 /* MovieDetailsViewController.swift */; };
 		9C09E66E270A4B710008BCC6 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09E66D270A4B710008BCC6 /* MovieDetailsViewModel.swift */; };
 		9C12AB9827027E0C00AB93F0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12AB9727027E0C00AB93F0 /* Movie.swift */; };
+		9C1AD558270C684B0050279A /* MoviesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AD557270C684B0050279A /* MoviesListViewModelTests.swift */; };
+		9C1BD2B9270E514F007C1C52 /* MoviesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BD2B8270E514F007C1C52 /* MoviesRepositoryTests.swift */; };
+		9C27797D27115A7C00D4F153 /* MoviesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C27797C27115A7C00D4F153 /* MoviesServiceTests.swift */; };
+		9C2779802712A81700D4F153 /* filmworld_movies_list_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C27797F2712A81700D4F153 /* filmworld_movies_list_success.json */; };
+		9C2779822712A9A600D4F153 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2779812712A9A600D4F153 /* TestHelper.swift */; };
+		9C2779842712AA0200D4F153 /* ResponseStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2779832712AA0200D4F153 /* ResponseStubs.swift */; };
+		9C2779862712F5EF00D4F153 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2779852712F5EF00D4F153 /* MockURLProtocol.swift */; };
 		9C281EAA2701E10500974611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C281EA92701E10500974611 /* AppDelegate.swift */; };
 		9C281EAC2701E10500974611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C281EAB2701E10500974611 /* SceneDelegate.swift */; };
 		9C281EB32701E10600974611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C281EB22701E10600974611 /* Assets.xcassets */; };
 		9C281EB62701E10600974611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C281EB42701E10600974611 /* LaunchScreen.storyboard */; };
 		9C3B8E752703114700D0819E /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B8E742703114700D0819E /* MoviesRepository.swift */; };
 		9C3B8E77270315B100D0819E /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B8E76270315B100D0819E /* MoviesService.swift */; };
+		9C3E235327140C3F006602F4 /* filmworld_movies_list_bad_gateway.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E235227140C3F006602F4 /* filmworld_movies_list_bad_gateway.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C1AD552270C67760050279A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C281E9E2701E10500974611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C281EA52701E10500974611;
+			remoteInfo = ldPrinceTheatre;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13B297A3A9756FD1065BC41B /* Pods_ldPrinceTheatre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ldPrinceTheatre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +54,14 @@
 		9C09E66B2709A9BF0008BCC6 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		9C09E66D270A4B710008BCC6 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		9C12AB9727027E0C00AB93F0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9C1AD54E270C67760050279A /* ldPrinceTheatreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ldPrinceTheatreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1AD557270C684B0050279A /* MoviesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModelTests.swift; sourceTree = "<group>"; };
+		9C1BD2B8270E514F007C1C52 /* MoviesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryTests.swift; sourceTree = "<group>"; };
+		9C27797C27115A7C00D4F153 /* MoviesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesServiceTests.swift; sourceTree = "<group>"; };
+		9C27797F2712A81700D4F153 /* filmworld_movies_list_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = filmworld_movies_list_success.json; sourceTree = "<group>"; };
+		9C2779812712A9A600D4F153 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		9C2779832712AA0200D4F153 /* ResponseStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStubs.swift; sourceTree = "<group>"; };
+		9C2779852712F5EF00D4F153 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		9C281EA62701E10500974611 /* ldPrinceTheatre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ldPrinceTheatre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C281EA92701E10500974611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C281EAB2701E10500974611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +70,17 @@
 		9C281EB72701E10600974611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3B8E742703114700D0819E /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		9C3B8E76270315B100D0819E /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		9C3E235227140C3F006602F4 /* filmworld_movies_list_bad_gateway.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = filmworld_movies_list_bad_gateway.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C1AD54B270C67760050279A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C281EA32701E10500974611 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,10 +140,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9C1AD54F270C67760050279A /* ldPrinceTheatreTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C27797E2712A56300D4F153 /* JSON */,
+				9C27797C27115A7C00D4F153 /* MoviesServiceTests.swift */,
+				9C1BD2B8270E514F007C1C52 /* MoviesRepositoryTests.swift */,
+				9C1AD557270C684B0050279A /* MoviesListViewModelTests.swift */,
+				9C2779812712A9A600D4F153 /* TestHelper.swift */,
+				9C2779832712AA0200D4F153 /* ResponseStubs.swift */,
+				9C2779852712F5EF00D4F153 /* MockURLProtocol.swift */,
+			);
+			path = ldPrinceTheatreTests;
+			sourceTree = "<group>";
+		};
+		9C27797E2712A56300D4F153 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9C27797F2712A81700D4F153 /* filmworld_movies_list_success.json */,
+				9C3E235227140C3F006602F4 /* filmworld_movies_list_bad_gateway.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		9C281E9D2701E10500974611 = {
 			isa = PBXGroup;
 			children = (
 				9C281EA82701E10500974611 /* ldPrinceTheatre */,
+				9C1AD54F270C67760050279A /* ldPrinceTheatreTests */,
 				9C281EA72701E10500974611 /* Products */,
 				AA4CBBA0E81758FC9279F549 /* Pods */,
 				A22040F9DB7E9049762A3D54 /* Frameworks */,
@@ -120,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				9C281EA62701E10500974611 /* ldPrinceTheatre.app */,
+				9C1AD54E270C67760050279A /* ldPrinceTheatreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +217,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C1AD54D270C67760050279A /* ldPrinceTheatreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1AD556270C67760050279A /* Build configuration list for PBXNativeTarget "ldPrinceTheatreTests" */;
+			buildPhases = (
+				9C1AD54A270C67760050279A /* Sources */,
+				9C1AD54B270C67760050279A /* Frameworks */,
+				9C1AD54C270C67760050279A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C1AD553270C67760050279A /* PBXTargetDependency */,
+			);
+			name = ldPrinceTheatreTests;
+			productName = ldPrinceTheatreTests;
+			productReference = 9C1AD54E270C67760050279A /* ldPrinceTheatreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9C281EA52701E10500974611 /* ldPrinceTheatre */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C281EBA2701E10600974611 /* Build configuration list for PBXNativeTarget "ldPrinceTheatre" */;
@@ -187,6 +264,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					9C1AD54D270C67760050279A = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 9C281EA52701E10500974611;
+					};
 					9C281EA52701E10500974611 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -206,11 +287,21 @@
 			projectRoot = "";
 			targets = (
 				9C281EA52701E10500974611 /* ldPrinceTheatre */,
+				9C1AD54D270C67760050279A /* ldPrinceTheatreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C1AD54C270C67760050279A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2779802712A81700D4F153 /* filmworld_movies_list_success.json in Resources */,
+				9C3E235327140C3F006602F4 /* filmworld_movies_list_bad_gateway.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C281EA42701E10500974611 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +356,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C1AD54A270C67760050279A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BD2B9270E514F007C1C52 /* MoviesRepositoryTests.swift in Sources */,
+				9C27797D27115A7C00D4F153 /* MoviesServiceTests.swift in Sources */,
+				9C2779842712AA0200D4F153 /* ResponseStubs.swift in Sources */,
+				9C2779862712F5EF00D4F153 /* MockURLProtocol.swift in Sources */,
+				9C1AD558270C684B0050279A /* MoviesListViewModelTests.swift in Sources */,
+				9C2779822712A9A600D4F153 /* TestHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C281EA22701E10500974611 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +390,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C1AD553270C67760050279A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C281EA52701E10500974611 /* ldPrinceTheatre */;
+			targetProxy = 9C1AD552270C67760050279A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9C281EB42701E10600974611 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -298,6 +410,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9C1AD554270C67760050279A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XHT3APZP2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.incrementaldigital.ldPrinceTheatreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ldPrinceTheatre.app/ldPrinceTheatre";
+			};
+			name = Debug;
+		};
+		9C1AD555270C67760050279A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XHT3APZP2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.incrementaldigital.ldPrinceTheatreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ldPrinceTheatre.app/ldPrinceTheatre";
+			};
+			name = Release;
+		};
 		9C281EB82701E10600974611 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C1AD556270C67760050279A /* Build configuration list for PBXNativeTarget "ldPrinceTheatreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1AD554270C67760050279A /* Debug */,
+				9C1AD555270C67760050279A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9C281EA12701E10500974611 /* Build configuration list for PBXProject "ldPrinceTheatre" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
