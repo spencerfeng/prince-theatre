@@ -18,12 +18,18 @@ enum APIError: Error {
 
 class MoviesService {
     
+    private let session: URLSession
+    
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
+    
     func getMoviesList(provider: MovieProvider) -> AnyPublisher<[RawMovie], APIError> {
         guard let url = buildGetMoivesListURL(provider: provider) else {
             return Fail<[RawMovie], APIError>(error: .url).eraseToAnyPublisher()
         }
         
-        return URLSession.shared
+        return session
             .dataTaskPublisher(for: buildRequest(url: url))
             .map(\.data)
             .decode(type: RawMoviesList.self, decoder: JSONDecoder())
@@ -46,7 +52,7 @@ class MoviesService {
             return Fail<RawMovieDetails, APIError>(error: .url).eraseToAnyPublisher()
         }
         
-        return URLSession.shared
+        return session
             .dataTaskPublisher(for: buildRequest(url: url))
             .map(\.data)
             .decode(type: RawMovieDetails.self, decoder: JSONDecoder())
