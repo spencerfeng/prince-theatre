@@ -3,7 +3,7 @@
     "Movies": [
         {
             "ID": "fw2488496",
-            "Title": "Star Wars: Episode VII - The Force Awakens",
+            "Title": "Star Wars: Episode VII - The Force Awakens Again",
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg"
         },
@@ -60,12 +60,6 @@
             "Title": "Star Wars: Episode II - Attack of the Clones",
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg"
-        },
-        {
-            "ID": "fw0121766",
-            "Title": "Star Wars: Episode III - Revenge of the Sith",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"
         }
     ]
 }

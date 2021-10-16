@@ -11,6 +11,7 @@ import Foundation
 enum ResponseStubs: String {
     case filmworldMoviesListSuccess = "filmworld_movies_list_success"
     case filmworldMoviesListBadGateway = "filmworld_movies_list_bad_gateway"
+    case filmworldMovieDetailsSuccess = "filmworld_movie_details_success"
     
     func getResponseData() -> Data {
         return TestHelper().loadDataFromJson(fileName: self.rawValue)

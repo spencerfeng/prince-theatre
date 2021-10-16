@@ -8,89 +8,84 @@
 import Foundation
 import Combine
 import UIKit
+import Alamofire
 
 enum APIError: Error {
-    case url
-    case network
-    case parsing
-    case unknown
+    case invalidResponseValue
+    case networking
 }
 
 class MoviesService {
     
-    private let session: URLSession
+    private let session: Session
+
+    private let headers: HTTPHeaders = [
+        "x-api-key": "Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7"
+    ]
+    private let apiBaseURL = "https://challenge.lexicondigital.com.au/api"
     
-    init(session: URLSession = URLSession.shared) {
+    init(session: Session = AF) {
         self.session = session
     }
     
     func getMoviesList(provider: MovieProvider) -> AnyPublisher<[RawMovie], APIError> {
-        guard let url = buildGetMoivesListURL(provider: provider) else {
-            return Fail<[RawMovie], APIError>(error: .url).eraseToAnyPublisher()
-        }
-        
-        return session
-            .dataTaskPublisher(for: buildRequest(url: url))
-            .map(\.data)
-            .decode(type: RawMoviesList.self, decoder: JSONDecoder())
-            .map { $0.movies }
-            .mapError { error -> APIError in
-                switch error {
-                case is URLError:
-                    return .network
-                case is DecodingError:
-                    return .parsing
-                default:
-                    return .unknown
+        return Future { [weak self] promise in
+            guard let self = self else { return }
+            
+            self.session.request(self.buildGetMoviesListURLString(provider: provider), headers: self.headers)
+                .validate()
+                .responseDecodable(of: RawMoviesList.self) { response in
+                    switch response.result {
+                    case .success:
+                        guard let value = response.value else {
+                            return promise(.failure(APIError.invalidResponseValue))
+                        }
+                        return promise(.success(value.movies))
+                    case .failure(let error):
+                        print("AF error in getting movies list: \(error)")
+                        return promise(.failure(APIError.networking))
+                    }
                 }
-            }
-            .eraseToAnyPublisher()
+        }
+        .eraseToAnyPublisher()
     }
     
     func getMovie(provider: MovieProvider, movieId: String) -> AnyPublisher<RawMovieDetails, APIError> {
-        guard let url = buildGetMovieDetailsURL(provider: provider, movieId: movieId) else {
-            return Fail<RawMovieDetails, APIError>(error: .url).eraseToAnyPublisher()
-        }
-        
-        return session
-            .dataTaskPublisher(for: buildRequest(url: url))
-            .map(\.data)
-            .decode(type: RawMovieDetails.self, decoder: JSONDecoder())
-            .mapError { error -> APIError in
-                switch error {
-                case is URLError:
-                    return .network
-                case is DecodingError:
-                    return .parsing
-                default:
-                    return .unknown
+        return Future { [weak self] promise in
+            guard let self = self else { return }
+            
+            self.session.request(self.buildGetMovieDetailsURLString(provider: provider, movieId: movieId), headers: self.headers)
+                .validate()
+                .responseDecodable(of: RawMovieDetails.self) { response in
+                    switch response.result {
+                    case .success:
+                        guard let value = response.value else { return promise(.failure(APIError.invalidResponseValue))}
+                        return promise(.success(value))
+                    case .failure(let error):
+                        print("AF error in getting movie details: \(error)")
+                        return promise(.failure(APIError.networking))
+                    }
                 }
-            }
-            .eraseToAnyPublisher()
+        }
+        .eraseToAnyPublisher()
     }
     
-    private func buildGetMoivesListURL(provider: MovieProvider) -> URL? {
+    private func buildGetMoviesListURLString(provider: MovieProvider) -> String {
         switch provider {
         case .cinemaworld:
-            return URL(string: "https://challenge.lexicondigital.com.au/api/cinemaworld/movies")
+            return "\(apiBaseURL)/cinemaworld/movies"
         case .filmworld:
-            return URL(string: "https://challenge.lexicondigital.com.au/api/filmworld/movies")
+            return "\(apiBaseURL)/filmworld/movies"
         }
     }
     
-    private func buildGetMovieDetailsURL(provider: MovieProvider, movieId: String) -> URL? {
+    private func buildGetMovieDetailsURLString(provider: MovieProvider, movieId: String) -> String {
         switch provider {
         case .cinemaworld:
-            return URL(string: "https://challenge.lexicondigital.com.au/api/cinemaworld/movie/\(movieId)")
+            return "\(apiBaseURL)/cinemaworld/movie/\(movieId)"
         case .filmworld:
-            return URL(string: "https://challenge.lexicondigital.com.au/api/filmworld/movie/\(movieId)")
+            return "\(apiBaseURL)/filmworld/movie/\(movieId)"
         }
-    }
-    
-    private func buildRequest(url: URL) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.setValue("Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7", forHTTPHeaderField: "x-api-key")
-        return request
     }
     
 }

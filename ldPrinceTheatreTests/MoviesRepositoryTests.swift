@@ -200,13 +200,13 @@ private class MockMoviesService: MoviesService {
             if !shouldReturnErrorForFilmworldMoviesList {
                 return Just(filmworldRawMovies).setFailureType(to: APIError.self).eraseToAnyPublisher()
             }
-            return Fail<[RawMovie], APIError>(error: .network).eraseToAnyPublisher()
+            return Fail<[RawMovie], APIError>(error: .networking).eraseToAnyPublisher()
         }
         
         if !shouldReturnErrorForCinemaworldMoviesList {
             return Just(cinemaworldRawMovies).setFailureType(to: APIError.self).eraseToAnyPublisher()
         }
-        return Fail<[RawMovie], APIError>(error: .network).eraseToAnyPublisher()
+        return Fail<[RawMovie], APIError>(error: .networking).eraseToAnyPublisher()
     }
     
     var filmworldRawMovieDetails: RawMovieDetails?
@@ -219,13 +219,13 @@ private class MockMoviesService: MoviesService {
             if !shouldReturnErrorForFilmworldMovieDetails {
                 return Just(filmworldRawMovieDetails!).setFailureType(to: APIError.self).eraseToAnyPublisher()
             }
-            return Fail<RawMovieDetails, APIError>(error: APIError.unknown).eraseToAnyPublisher()
+            return Fail<RawMovieDetails, APIError>(error: APIError.networking).eraseToAnyPublisher()
         }
         
         if !shouldReturnErrorForCinemaworldMovieDetails {
             return Just(cinemaworldRawMovieDetails!).setFailureType(to: APIError.self).eraseToAnyPublisher()
         }
-        return Fail<RawMovieDetails, APIError>(error: APIError.unknown).eraseToAnyPublisher()
+        return Fail<RawMovieDetails, APIError>(error: APIError.networking).eraseToAnyPublisher()
     }
     
 }
